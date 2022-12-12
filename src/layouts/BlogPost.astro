@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
 import Footer from "./Footer.astro";
 
@@ -15,7 +14,6 @@ const { title, description, publishDate, author, authorURL, heroImage, permalink
 	</head>
 
 	<body>
-		<BlogHeader />
 		<div class="wrapper">
 			<BlogPost {title} {author} {authorURL} {heroImage} {publishDate} {alt}>
 				<slot />
