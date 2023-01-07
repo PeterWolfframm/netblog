@@ -1,5 +1,4 @@
 ---
-import Announcement from "./Announcement.astro";
 import HeroHeading from "./HeroHeading.astro";
 
 export interface Props {
@@ -11,7 +10,7 @@ export interface Props {
 const { heading, quote1, quote2 } = Astro.props;
 ---
 
-<div class="bg-white isolate -mt-20 pb-32">
+<div class="pb-32 -mt-20 bg-white isolate">
   <div
     class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
   >

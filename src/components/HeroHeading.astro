@@ -1,35 +1,33 @@
 ---
-import Announcement from "./Announcement.astro";
-import ButtonPrimary from "./ButtonPrimary.astro";
-import ButtonSecondary from "./ButtonSecondary.astro";
+
 
 export interface Props {
   heading: string;
-  subheading: string;
-  announcement: string;
+  quote1: string;
+  quote2: string;
 }
 const { heading, quote1, quote2 } = Astro.props;
 ---
 
-<div class="max-w-4xl pt-36 mx-auto sm:pt-48 text-center">
+<div class="max-w-4xl mx-auto text-center pt-36 sm:pt-48">
   <!-- <Announcement announcement="asdfasdf" /> -->
 
   <h1
-    class="font-bold tracking-tight sm:text-8xl text-6xl font-display underline decoration-primary-500"
+    class="text-6xl font-bold tracking-tight underline sm:text-8xl font-display decoration-primary-500"
   >
     {heading}
   </h1>
 
   <span
-    class="align-top text-center text-xl font-semibold tracking-widest italic my-8 block leading-8"
+    class="block my-8 text-xl italic font-semibold leading-8 tracking-widest text-center align-top"
   >
     [ noun, German ]</span
   >
 
-  <p class="mt-6 sm:text-4xl leading-8 text-center text-gray-800 mx-auto">
+  <p class="mx-auto mt-6 leading-8 text-center text-gray-800 sm:text-4xl">
     {quote1}
   </p>
-  <p class="mt-6 sm:text-4xl leading-8 text-center text-gray-800">
+  <p class="mt-6 leading-8 text-center text-gray-800 sm:text-4xl">
     {quote2}
   </p>
 </div>
