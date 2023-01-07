@@ -1,6 +1,7 @@
 ---
 import Footer from "./Footer.astro";
-import '@fontsource/chivo';
+import "@fontsource/chivo";
+import "@fontsource/open-sans";
 
 export interface Props {
   title: string;
@@ -20,6 +21,6 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>

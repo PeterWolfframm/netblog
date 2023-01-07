@@ -2,15 +2,17 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  darkMode: "media",
+
   content: ["./src/**/**/**/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
         display: ["Chivo"],
-        // body: ["Open Sans"],
+        body: ["Open Sans"],
       },
       colors: {
-        primary: colors.green,
+        primary: colors.cyan,
       },
       screens: {
         sm: "640px",

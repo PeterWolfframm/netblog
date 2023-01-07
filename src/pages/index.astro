@@ -7,6 +7,9 @@ import BlogPostPreview from "../components/BlogPostPreview.astro";
 import { SITE } from "../config";
 
 import { Plausible } from "astro-analytics";
+import ButtonPrimary from "../components/ButtonPrimary.astro";
+import ButtonSecondary from "../components/ButtonSecondary.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -36,32 +39,15 @@ allPosts = allPosts.sort(
     <Plausible domain="fueledbymatcha.com" />
   </head>
 
-  <body>
+  <body class="font-body">
     <Hero
-      heading="Wagemut: doing something important despite being afraid or/and in danger"
+      heading="wagemut"
       announcement=""
-      subheading="We are a developer studio, building microsolutions to niche problems "
+      quote1="1. the act of stepping outside one's comfort zone and taking bold action"
+      quote2="2. developer collective imagining a braver and better world"
     />
-    <div
-      class="relative px-4 pt-16 pb-20 bg-transparent sm:px-6 lg:px-8 lg:pt-24 lg:pb-28"
-    >
-      <div class="relative mx-auto max-w-7xl">
-        <!-- <div class="text-center">
-          <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-          >
-            {title}
-          </h2>
-          <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-            libero labore natus atque, ducimus sed.
-          </p>
-        </div> -->
-        <div class="grid gap-5 mx-auto mt-12 lg:max-w-lg">
-          {allPosts.map((p) => <BlogPostPreview post={p} />)}
-        </div>
-      </div>
+    <div class="gap-5 mx-auto lg:max-w-2xl my-20">
+      {allPosts.map((p) => <BlogPostPreview post={p} />)}
     </div>
-    <Newsletter />
   </body>
 </html>
